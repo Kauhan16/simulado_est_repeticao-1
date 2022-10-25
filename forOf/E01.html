@@ -8,12 +8,14 @@
     */
 
     //ENTRADA
-
-
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
     //PROCESSAMENTO
-
-
+    let arroz = []
+    let media = (3.90 + 4.80 + 5.75 + 6.99 + 7.00 + 4.99 + 5.19) / precoKgArroz.length;
+    for (let numeros of precoKgArroz)
+        media = arroz.push(numeros)
     //SAÍDA
-
-
+    document.write(`a media do preço do arroz é de R$ ${media.toFixed(2)}</br>`)
+    document.write(`Ordem crescente ${precoKgArroz.sort((a, b) => a - b)}</br>`)
+    document.write(`Ordem decrescente ${precoKgArroz.sort((a, b) => b - a)}</br>`)
 </script>

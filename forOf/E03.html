@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
-
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
 
     //PROCESSAMENTO
-
+    let livrosromaticos = [];
+    let livrostecnicos = [];
+    for (let nome of listaLivros) {
+        let genero = prompt(`O nome ${nome} é de romance (R) ou tecino (T)?`).trim().toUpperCase();
+        if (genero === "T") {
+            livrostecnicos.push(nome);
+        }
+        if (genero === "R") {
+            livrosromaticos.push(nome);
+        }
+    }
 
     //SAÍDA
-
-
+    document.write(`Os livros tecnicos são: ${livrostecnicos.join(", ")}</br>`);
+    document.write(`Os livros romantico são: ${livrosromaticos.join(", ")}</br>`);
+    document.write("O leitor possui 5 livros ao total")
 </script>

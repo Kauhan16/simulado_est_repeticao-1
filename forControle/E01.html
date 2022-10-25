@@ -5,14 +5,22 @@
     Após, usando a estrutura de repetição "for com variável de controle", peça para o Professor informar o nome dos alunos e também informar se é menino ou menina.
     Separe-os em duas listas e apresente o nome dos meninos ordenados alfabeticamente, que estarão em uma lista, e o nome das meninas também ordenados alfabeticamente, que estarão em outra lista.
     */
+    //Entrada
+    let Alunos = parseInt(prompt("insira a quantiedade de alunos"));
+    let M = [];
+    let F = [];
+    //PROCESSAMENTO  
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    for (let contador = 1; contador <= Alunos; contador++) {
+        let nome = prompt(`informe o número de alunos ${contador}`)
+        let genero = prompt(`O nome ${contador} é homem (M) ou mulher (F)?`).trim().toUpperCase();
+        if (genero == "M") {
+            M.push(nome)
+        } else if (genero == "F") {
+            F.push(nome)
+        }
+    };
 
     //SAÍDA
-
-    
+    document.write(`Nome masculino: ${M.sort().join(", ")}</br> Nome femmino:${F.sort().join(", ")}`)
 </script>

@@ -12,12 +12,21 @@
     */
 
     //ENTRADA
+    let Abanteciminto = parseInt(prompt("insira quantas vezes abasteceu"));
+    let precoDagasosa = Number(prompt("insira o preço da gasolina"));
+    let kmRodados = parseInt(prompt("quantos quilometros rodados"));
 
 
     //PROCESSAMENTO
-
+    let CustosDosAbastecimentos = 0;
+    for (let contador = 1; contador <= Abanteciminto; contador++) {
+CustosDosAbastecimentos = Number(prompt(`quantos ta custando cada abastecimento`)) + CustosDosAbastecimentos
+    }
+    let kmzin = kmRodados / CustosDosAbastecimentos;
 
     //SAÍDA
-
+    document.write(`O custo de cada quilômetro percorrido foi de ${kmzin.toFixed(2)}`)
+    document.write(`O custo total dos abastecimentos efetuadas foi de ${CustosDosAbastecimentos.toFixed(2)}`)
+    document.write(`A quilometragem total percorrida foi de ${kmRodados}`)
 
 </script>

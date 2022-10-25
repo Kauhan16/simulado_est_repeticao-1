@@ -11,12 +11,15 @@
     */
 
     //ENTRADA
-
-
+let InvestimentoInicial = Number(prompt(`Insira o valor inicial`))
     //PROCESSAMENTO
-
+    let Guarda = InvestimentoInicial 
+    let contador = 0
+    for (contador; Guarda <= InvestimentoInicial * 2 ; contador++){
+        Guarda = Guarda + (Guarda * (0.5/100)) 
+    }
 
     //SAÍDA
-
+document.write(`o valor imcial foi de R$${InvestimentoInicial.toFixed(2)}</br> valor final de ${Guarda.toFixed(2)}</br>levou ${contador}meses para duplicar`)
 
 </script>
